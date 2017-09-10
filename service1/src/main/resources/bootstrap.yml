@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: service1 # Important to be the same as the file name in config server
+  profiles:
+    active:
+      default # Important to be one of the config file options i have in file name on config server
+  cloud:
+    config:
+      uri: http://localhost:8888 # Important config server to use

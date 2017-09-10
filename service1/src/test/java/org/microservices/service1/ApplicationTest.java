@@ -1,0 +1,22 @@
+package org.microservices.service1;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import static org.junit.Assert.*;
+
+/**
+ * Created by henke on 2017-09-10.
+ */
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class ApplicationTest {
+
+    //@Test
+    //public void contextLoads() {
+        // Tests that the Spring application context
+        // can be loaded successfully
+    //}
+}

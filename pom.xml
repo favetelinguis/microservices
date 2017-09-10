@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+
+<groupId>org</groupId>
+<artifactId>microservices-parent-pom</artifactId>
+<version>1.0-SNAPSHOT</version>
+<packaging>pom</packaging>
+
+
+<name>microservices-parent-pom</name>
+<description>Parent Pom for experiment with microservices</description>
+
+<parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.4.4.RELEASE</version>
+</parent>
+<modules>
+    <module>configurationserver</module>
+    <module>service1</module>
+</modules>
+    <properties>
+        <junit.version>4.12</junit.version>
+        <assertj.version>3.5.2</assertj.version>
+        <mockito.version>1.10.19</mockito.version>
+    </properties>
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dependencies</artifactId>
+            <version>Camden.SR5</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+        <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>${junit.version}</version>
+          <scope>test</scope>
+        </dependency>
+        <dependency>
+          <groupId>org.assertj</groupId>
+          <artifactId>assertj-core</artifactId>
+          <version>${assertj.version}</version>
+          <scope>test</scope>
+        </dependency>
+        <dependency>
+          <groupId>org.mockito</groupId>
+          <artifactId>mockito-core</artifactId>
+          <version>${mockito.version}</version>
+          <scope>test</scope>
+          <exclusions>
+            <exclusion>
+              <groupId>org.hamcrest</groupId>
+              <artifactId>hamcrest-core</artifactId>
+            </exclusion>
+          </exclusions>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+
+
+<build>
+    <plugins>
+        <plugin>
+            <groupId>com.spotify</groupId>
+            <artifactId>docker-maven-plugin</artifactId>
+            <version>0.4.10</version>
+            <configuration>
+                <baseImage>java</baseImage>
+                <imageName>example</imageName>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+</project>
