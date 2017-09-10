@@ -1,16 +1,10 @@
-####
-#Classpath and file-based solution
-####
-
 server:
-   port: 8888
+  port: 8888
 spring:
   cloud:
     config:
       server:
-        encrypt:
-          enabled: true # Require config client to do decryption
-        native:
-          searchLocations: classpath:config/service1,classpath:config/service2
-#              searchLocations: file:///Users/henke/Documents/code/java/microservicesinaction/microservices/configurationserver/src/main/resources/config/service1,
-#                               file:///Users/henke/Documents/code/java/microservicesinaction/microservices/configurationserver/src/main/resources/config/service2
+        encrypt.enabled: false
+        git:
+          uri: https://github.com/favetelinguis/microservicesconfig
+          searchPaths: service1,service2
