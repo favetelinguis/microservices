@@ -17,7 +17,7 @@ import static org.mockito.BDDMockito.given;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class LicenseServiceTest {
+public class LicenseServiceSpringTest {
 
     @MockBean
     private LicenseRepository licenseRepository;
