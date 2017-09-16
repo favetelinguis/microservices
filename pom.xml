@@ -19,11 +19,9 @@
 <modules>
     <module>configurationserver</module>
     <module>service1</module>
+    <module>eurekaserver</module>
 </modules>
     <properties>
-        <junit.version>4.12</junit.version>
-        <assertj.version>3.5.2</assertj.version>
-        <mockito.version>1.10.19</mockito.version>
     </properties>
 <dependencyManagement>
     <dependencies>
@@ -33,30 +31,6 @@
             <version>Camden.SR5</version>
             <type>pom</type>
             <scope>import</scope>
-        </dependency>
-        <dependency>
-          <groupId>junit</groupId>
-          <artifactId>junit</artifactId>
-          <version>${junit.version}</version>
-          <scope>test</scope>
-        </dependency>
-        <dependency>
-          <groupId>org.assertj</groupId>
-          <artifactId>assertj-core</artifactId>
-          <version>${assertj.version}</version>
-          <scope>test</scope>
-        </dependency>
-        <dependency>
-          <groupId>org.mockito</groupId>
-          <artifactId>mockito-core</artifactId>
-          <version>${mockito.version}</version>
-          <scope>test</scope>
-          <exclusions>
-            <exclusion>
-              <groupId>org.hamcrest</groupId>
-              <artifactId>hamcrest-core</artifactId>
-            </exclusion>
-          </exclusions>
         </dependency>
     </dependencies>
 </dependencyManagement>
