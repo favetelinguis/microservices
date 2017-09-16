@@ -6,4 +6,5 @@ spring:
       default # Important to be one of the config file options i have in file name on config server
   cloud:
     config:
-      uri: http://localhost:8888 # Important config server to use
+      enabled: true
+      #uri: http://localhost:8888 # Important config server to use

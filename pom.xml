@@ -20,6 +20,7 @@
     <module>configurationserver</module>
     <module>service1</module>
     <module>eurekaserver</module>
+    <module>service2</module>
 </modules>
     <properties>
     </properties>
