@@ -9,6 +9,7 @@
         <module name="configurationserver" />
         <module name="eurekaserver" />
         <module name="service1" />
+        <module name="service2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,6 +17,7 @@
       <module name="eurekaserver" target="1.8" />
       <module name="microservices" target="1.6" />
       <module name="service1" target="1.8" />
+      <module name="service2" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
